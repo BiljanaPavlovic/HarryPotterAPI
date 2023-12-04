@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1>Harry Potter API</h1>
+      <hr />
       <BookList />
     </div>
   );

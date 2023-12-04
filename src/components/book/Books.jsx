@@ -1,17 +1,17 @@
 /** @format */
 import "./books.css";
 import React, { useEffect, useState } from "react";
-import get from "../../services";
 import Book from "./Book";
+import getBooks from "../../services";
 
 export default function BookList(props) {
   const [book, setBook] = useState([]);
   const data = props;
   useEffect(() => {
-    get().then((data) => {
+    getBooks().then((data) => {
       setBook(data.data);
     });
-    console.log(props);
+
     console.log(data);
   }, []);
   return (
